@@ -1,0 +1,144 @@
+strategic_planning_task:
+  description: >
+    Take the raw idea about {topic} and develop it into a structured content strategy.
+    Consider:
+    1. Core message and main value proposition
+    2. Target audience pain points and desires
+    3. Key angles to explore (minimum 3)
+    4. Content pillars that can be developed
+    5. Potential emotional hooks
+    6. Business goals alignment
+    7. Areas where biblical wisdom could add value
+    
+    Wait 30 seconds between analysis to respect rate limits.
+  expected_output: >
+    A structured content strategy document containing:
+    1. Core message
+    2. 3-4 key angles to explore
+    3. Content pillars
+    4. Emotional hooks for each angle
+    5. Specific value propositions for the target audience
+    6. Potential themes for biblical integration
+  agent: strategic_planner
+
+biblical_wisdom_task:
+  description: >
+    Based on the strategic plan, identify relevant biblical references and wisdom that naturally
+    connect with {topic} and the identified angles. Consider:
+    1. Verses that provide timeless wisdom related to each content angle
+    2. Biblical stories or principles that illustrate key points
+    3. How these references relate to modern young adult challenges
+    4. Ways to present the wisdom that feels natural and relevant
+    5. Cultural sensitivity in the Portuguese context
+    
+    Wait 30 seconds between searches to respect rate limits.
+  expected_output: >
+    For each content angle, provide:
+    1. 2-3 relevant biblical references with brief context
+    2. Modern application of the wisdom
+    3. Natural ways to integrate into social media content
+    4. Suggested tone and approach for the target audience
+  agent: bible_expert
+
+research_task:
+  description: >
+    Based on the strategic plan and biblical insights, research trending aspects of {topic} that would appeal to Portuguese young adults (18-35).
+    Consider:
+    1. Current trends and discussions about {topic} in Portugal
+    2. How each strategic angle relates to young professionals and students
+    3. Pain points and interests of the 18-35 demographic
+    4. Popular hashtags and engagement patterns
+    5. Cultural context and local references
+    6. How biblical wisdom resonates with current trends
+    Make sure all findings are relevant for 2024.
+  expected_output: >
+    A list of 5-7 compelling angles about {topic} that would resonate with Portuguese young adults,
+    including relevant trends, pain points, cultural connections, and biblical wisdom integration points.
+  agent: researcher
+
+reporting_task:
+  description: >
+    Transform the strategic insights, biblical wisdom, and research into 3 engaging Instagram post ideas in Portuguese (PT-PT).
+    For each post:
+    1. Write a captivating caption in PT-PT (max 200 characters)
+    2. Include relevant hashtags (mix of Portuguese and English)
+    3. Add a clear call-to-action
+    4. Keep the tone young, direct, and professional
+    5. Make it shareable and engaging for 18-35 year olds
+    6. Naturally integrate biblical wisdom where relevant
+    
+    Remember:
+    - Use proper European Portuguese (PT-PT)
+    - Keep it concise and impactful
+    - Include emojis strategically
+    - Make the call-to-action compelling
+    - Align with the strategic angles provided
+    - Present biblical references in a relatable way
+    - Avoid preachy or overly religious tone
+  expected_output: >
+    3 complete Instagram posts in PT-PT, each with caption, hashtags, and call-to-action.
+    Format each post as:
+    ---
+    [Caption in PT-PT with integrated biblical wisdom]
+    
+    [Hashtags]
+    
+    [Call-to-action in PT-PT]
+    
+    [Biblical reference, if used]
+    ---
+  agent: reporting_analyst
+
+image_generation_task:
+  description: >
+    For each post, create a detailed prompt that will generate a visually compelling background image using DALL-E.
+    
+    Key Requirements:
+    1. ALWAYS ensure clear space for text overlay (typically center or top/bottom thirds)
+    2. Use subtle, non-distracting patterns or gradients in text areas
+    3. Maintain balanced contrast for text readability
+    4. Keep a 1:1 aspect ratio for Instagram
+    5. NEVER include hands or explicit hand gestures
+    6. ALWAYS ensure diverse representation
+    7. AVOID using styles that resemble Middle-Eastern art
+    
+    Design Guidelines:
+    1. Visual Style:
+       - Use artistic styles that work well with text (e.g., abstract, minimalist, geometric)
+       - Create subtle gradients or patterns in text areas
+       - Avoid busy or cluttered compositions
+    
+    2. Composition:
+       - Reserve 30-40% of the image for text overlay
+       - Use the rule of thirds for text placement zones
+       - Keep important visual elements away from text areas
+       - Create natural framing for text
+    
+    3. Color and Contrast:
+       - Use color palettes that allow for both light and dark text
+       - Create subtle contrast variations in text areas
+       - Avoid extreme contrast that might compete with text
+    
+    4. Background Elements:
+       - Use soft, blurred, or abstract elements in text areas
+       - Keep detailed elements to the non-text areas
+       - Create visual flow that guides to text placement
+    
+    5. Cultural Elements:
+       - Incorporate Portuguese design motifs subtly
+       - Include diverse representation in artistic ways
+       - Add biblical symbolism through abstract elements
+    
+    Format each prompt as:
+    --- PROMPT X: [Your detailed prompt] ---
+    
+  expected_output: >
+    3 detailed image generation prompts, one for each post, formatted as specified.
+    Each prompt should:
+    1. Specify clear text overlay areas
+    2. Include contrast and readability considerations
+    3. Describe background patterns or gradients
+    4. Maintain 1:1 aspect ratio
+    5. Ensure diverse representation
+    6. Avoid elements that would compete with text
+  agent: prompt_engineer
