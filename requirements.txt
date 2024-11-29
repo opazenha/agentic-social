@@ -1,0 +1,4 @@
+flask==3.0.0
+crewai>=0.1.0
+pysbd>=0.3.4
+crewai-tools>=0.0.5
