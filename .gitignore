@@ -1,0 +1,64 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.env
+.venv
+.python-version
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.project
+.pydevproject
+.settings/
+
+# Generated content
+src/social/generated_posts/
+src/social/generated_prompts/
+src/social/generated_images/
+*.md
+!README.md
+*.png
+*.jpg
+*.jpeg
+*.gif
+
+# Logs
+*.log
+logs/
+log/
+
+# Local configuration
+.env*
+config.local.yaml
+*.local.yaml
+*.local.yml
+
+# Operating System
+.DS_Store
+Thumbs.db
